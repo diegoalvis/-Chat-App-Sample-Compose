@@ -1,6 +1,7 @@
 [versions]
 agp = "8.3.0"
-kotlin = "1.9.0"
+composeBom = "2024.02.02"
+kotlin = "1.9.22"
 coreKtx = "1.12.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -10,17 +11,21 @@ material = "1.11.0"
 compileSdk = "34"
 targetSdk = "34"
 minSdk = "26"
+uiToolingAndroid = "1.6.3"
+uiToolingPreviewAndroid = "1.6.3"
 
 
 [libraries]
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-ui-tooling-android = { module = "androidx.compose.ui:ui-tooling-android", version.ref = "uiToolingAndroid" }
+androidx-ui-tooling-preview-android = { module = "androidx.compose.ui:ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 composeMaterial3 = { module = "androidx.compose.material3:material3" }
-
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
